@@ -30,15 +30,15 @@ def initialize_network(n_inputs, n_hidden, n_outputs):
 
 # Calculate neuron activation for an input
 def activate(weights, inputs):
-    activation = weights[len(weights)-1]
+    h = weights[len(weights)-1]
     for i in range(len(weights)-1):
-        activation += weights[i] * inputs[i]
-    return activation
+        h += weights[i] * inputs[i]
+    return h
 
 
 # Transfer neuron activation sigmoid function
 def transferSigmoidFunction(activation):
-    return 1.0 / (1.0 + exp(-activation))
+    return 1.0 / (1.0 + exp(- activation))
 
 # Calculate the derivative of sigmoid function
 def transfer_Sigmoid_derivative(output):
@@ -46,7 +46,7 @@ def transfer_Sigmoid_derivative(output):
 
 # Transfer neuron activation tanh function
 def transferTanhFunction(activation):
-    return tanh(-activation)
+    return tanh(- activation)
 #Calculate the derivative of tanh function
 def transfer_Tanh_derivative(output):
     return atanh(output)
@@ -64,7 +64,7 @@ def forward_propagate(network, row):
     return inputs
 
 # Backpropagate error and store in neurons
-def backward_propagate_error(network, expected):
+def bp_error(network, expected):
     for i in reversed(range(len(network))):
         layer = network[i]
         errors = list()
@@ -100,7 +100,7 @@ def train_network(network, train, l_rate, n_epoch, n_outputs):
             outputs = forward_propagate(network, row)
             expected = [0 for i in range(n_outputs)]
             expected[row[len(row)-1]] = 1
-            backward_propagate_error(network, expected)
+            bp_error(network, expected)
             update_weights(network, row, l_rate)
 
 
