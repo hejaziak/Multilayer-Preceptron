@@ -7,8 +7,8 @@ This is a multilayer preceptron using batch backpropagation training .
 
 
 
-### Installing and running
-* Clone the repo
+### Installing and Running
+* Clone the repository
 * Go to the directory
 
 ```
