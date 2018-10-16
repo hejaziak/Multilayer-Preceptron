@@ -7,7 +7,7 @@ This is a multilayer preceptron using batch backpropagation training .
 
 
 
-### Installing and Running
+### Installing and Running the code
 * Clone the repository
 * Go to the directory
 
@@ -20,9 +20,9 @@ $ python MLP.py
 # python 3
 $ python 3 MLP.py
 ```
-## Running different data sets
+## Running different datasets
 
-Change the file name in the mlp.py code under the comment "Running the mlp" with your data set file name . 
+Change the file name in the mlp.py code under the comment "Running the mlp" with your dataset file name . 
 Make sure that your data set is in the same directory.
 
 
