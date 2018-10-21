@@ -121,7 +121,7 @@ def back_propagation(train, test, l_rate, n_epoch, n_hidden):
         predictions.append(prediction)
     return predictions
 
-# Calculate accuracy percentage
+# Evaluating the model using accuracy metric
 def accuracy_metric(actual, predicted):
     correct = 0
     for i, data in enumerate(actual):
