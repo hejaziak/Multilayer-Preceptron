@@ -1,6 +1,6 @@
 # Multilayer-Preceptron
 
-This is a multilayer preceptron using batch backpropagation training . 
+This is a multilayer preceptron using batch backpropagation training. 
 
 ### Dependencies
 - Python
@@ -22,7 +22,7 @@ $ python 3 MLP.py
 ```
 ## Running different datasets
 
-Change the file name in the mlp.py code under the comment "Running the mlp" with your dataset file name . 
+Change the file name in the mlp.py code under the comment "Running the mlp" with your dataset file name. 
 Make sure that your data set is in the same directory.
 
 
